@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bubble Sort Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <header>
+        <h1>Bubble Sort Visualizer</h1>
+        <p>Generate or type an array, then watch Bubble Sort animate step-by-step.</p>
+      </header>
+
+      <div class="controls" style="margin-top:12px">
+        <div class="group">
+          <input id="size" type="number" min="2" max="60" placeholder="Size (e.g., 12)" />
+        </div>
+
+        <div class="group">
+          <input id="elements" type="text" placeholder="Manual (comma separated) — e.g. 20,5,90,12" />
+        </div>
+
+        <div class="group">
+          <button id="generate" class="btn">Generate Bars</button>
+          <button id="sort" class="btn">Start Sorting</button>
+          <button id="reset" class="btn secondary">Reset</button>
+        </div>
+
+        <div class="group" style="margin-left:auto">
+          <label style="font-size:13px; color:var(--muted)">Speed</label>
+          <input id="speed" type="range" min="50" max="1200" step="10" value="400" />
+        </div>
+      </div>
+
+      <div class="bars-wrap">
+        <div id="bars-container" aria-live="polite"></div>
+      </div>
+
+      <div class="footer">
+        <div class="legend">
+          <div class="item"><span class="swatch" style="background:var(--bar)"></span>Normal</div>
+          <div class="item"><span class="swatch" style="background:var(--compare)"></span>Comparing</div>
+          <div class="item"><span class="swatch" style="background:var(--swap)"></span>Swapping</div>
+          <div class="item"><span class="swatch" style="background:var(--sorted)"></span>Sorted</div>
+        </div>
+
+        <div style="color:var(--muted); font-size:13px">Tip: you can use manual values or size to generate random array</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
